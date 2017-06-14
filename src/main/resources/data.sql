@@ -5,23 +5,28 @@
 #insert into SYS_ROLE (id,name) values (2,'ROLE_USER');
 
 
-
-
-#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('97871212820891', 'JavaEE开发的颠覆者: Spring Boot实战', '汪云飞', '电子工业出版社', 'Java, 编程, 教育', 0, 0);
-#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787115417305', 'Spring实战（第4版）', 'Craig Walls 沃尔斯', '人民邮电出版社', 'Java, 编程, 教育', 0, 0);
-#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544242516', '白夜行', ' 东野圭吾', '南海出版公司', '推理, 日本, 悬疑, 小说', 0, 0);
-#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544270878', '解忧杂货店', ' 东野圭吾', '南海出版公司', '温暖, 日本, 治愈, 小说', 0, 0);
-
-#insert into book(book_id, book_name, read_times, search_times) values('9787121282089', 'JavaEE开发的颠覆者: Spring Boot实战',0,0);
-
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787121282089', 'JavaEE开发的颠覆者: Spring Boot实战', '汪云飞', '电子工业出版社', 'Java, 编程, 教育', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787115417305', 'Spring实战（第4版）', 'Craig Walls 沃尔斯', '人民邮电出版社', 'Java, 编程, 教育', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787115209429', 'Spring揭秘', '王福强', '人民邮电出版社', 'Java, 框架, Web开发', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544242516', '白夜行', ' 东野圭吾', '南海出版公司', '推理, 日本, 悬疑, 小说', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544270878', '解忧杂货店', ' 东野圭吾', '南海出版公司', '温暖, 日本, 治愈, 小说', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787538276374', '上帝掷骰子吗', '曹天元', '辽宁教育出版社', '科普, 量子物理, 物理, 科学史, 量子力学, 科学', 0, 0);
-#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787206030048', '自私的基因', '卢允中', '吉林人民出版社', '科普, 基因, 进化论, 生物学, 科学', 0, 0);
-#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787508036083', '国富论', '亚当·斯密', '华夏出版社', '经济学, 国富论, 亚当・斯密, 经济, 经典', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787206030048', '自私的基因', '里查德.道金斯', '吉林人民出版社', '科普, 基因, 进化论, 生物学, 科学', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787508036083', '国富论', '亚当·斯密', '华夏出版社', '经济学, 国富论, 亚当·斯密, 经济, 经典', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787508659794', '行动的勇气', '本·伯南克', '中信出版社', '金融, 经济, 金融危机, 传记', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787807463726', '艺术的故事', '贡布里希', '广西美术出版社', '艺术, 艺术史, 贡布里希, 艺术的故事, 历史, 文化, 经典', 0, 0);
 #insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787805638195', '美的历程', '李泽厚', '天津社会科学院出版社', '美学, 李泽厚, 艺术, 美的历程, 哲学, 文化', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787500421368', '通往奴役之路', '哈耶克', '中国社会科学出版社', '自由主义, 经济学, 政治经济学, 政治, 哲学, 经济, 经典', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787508601632', '伟大的博弈', '约翰·S·戈登', '中信出版社', '金融, 华尔街, 经济, 历史, 博弈', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9789869236478', '房思琪的初戀樂園', '林奕含', '游擊文化', '女性, 小说, 伤痛, 台湾文学, 社会, 台湾', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787539989891', '巨人的陨落', '肯·福莱特', '江苏凤凰文艺出版社', '历史, 小说, 外国文学, 好书，值得一读, 英国小说, 经典', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787542654434', '极简宇宙史', '克里斯托弗·加尔法德', '上海三联书店', '科普, 宇宙, 天文, 宇宙学, 科学', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787550243279', '万物：创世', '延斯·哈德', '北京联合出版公司', '科普, 漫画, 绘本, 宇宙, 科学', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787542658616', '孤独之间', '李炜', '上海三联书店', '艺术史, 艺术, 西方艺术, 人文, 上海三联, 历史', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787535679871', '如花在野', '田中昭光', '浦睿文化·湖南美术出版社', '花道, 日本, 插花, 艺术, 美物抵心', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544244428', '恶意', '东野圭吾', '南海出版公司', '花道, 日本, 插花, 艺术, 美物抵心', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544241694', '嫌疑人X的献身', '东野圭吾', '南海出版公司', '东野圭吾, 推理, 日本, 小说, 推理, 悬疑', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787532136766', '蛙', '莫言', '上海文艺出版社', '计划生育, 中国文学, 社会问题, 茅盾文学奖', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787506320511', '檀香刑', '莫言', '作家出版社', '莫言, 小说, 中国文学, 当代文学, 中国, 长篇小说', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787506335058', '生死疲劳', '莫言', '作家出版社', '中国文学, 当代文学, 中国, 文学, 当代小说', 0, 0);
+#insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787500831112', '丰乳肥臀', '莫言', '中国工人出版社', '小说, 中国文学, 母亲, 当代文学, 中国当代文学, 中国', 0, 0);

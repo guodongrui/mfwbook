@@ -16,13 +16,14 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+import org.mfwbook.recommend.Recommendable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
 @Entity
-public class User implements UserDetails{
+public class User implements UserDetails,Recommendable{
     
     /**
 	 * 

@@ -3,13 +3,12 @@ package org.mfwbook.model;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
+import org.mfwbook.recommend.Recommendable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -17,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 // @NamedQuery(name="Person.withNameAndAddressNamedQuery",
 // query="select p from Person p where p.name=?1 and address=?2")
-public class Book {
+public class Book implements Recommendable{
 
 	@Id
 	private String bookId;
@@ -135,6 +134,8 @@ public class Book {
 		this.have_read_users = have_read_users;
 	}
 
-
+	public int getPopularity(){
+		return prefer_users.size()+reading_users.size()+have_read_users.size();
+	}
 
 }

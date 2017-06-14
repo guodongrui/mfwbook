@@ -1,5 +1,6 @@
 package org.mfwbook;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -8,6 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +20,8 @@ import org.mfwbook.dao.UserRepository;
 import org.mfwbook.model.Book;
 import org.mfwbook.model.BookComment;
 import org.mfwbook.model.User;
+import org.mfwbook.recommend.BooksRecommendBySys;
+import org.mfwbook.recommend.RecommendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -34,6 +38,9 @@ public class MfwbookApplicationTests {
 	
 	@Autowired
 	BookCommentRepository bookCommentRepository;
+	
+	@Autowired
+	RecommendService recommendService;
 
 	@Before
 	public void InitBinder() {
@@ -82,19 +89,42 @@ public class MfwbookApplicationTests {
 		assertNotNull(users);
 		assertTrue(users.size() > 0);
 		
-		User user_zhenxiongwu = userRepository.findByName("zhenxiongwu");
+	/*	User user_zhenxiongwu = userRepository.findByName("zhenxiongwu");
 		BookComment bookComment = new BookComment(user_zhenxiongwu, books.get(1));
 		bookComment.setContent("zhenxiongwu's first commentzhenxiongwu's first comment"
 				+ "zhenxiongwu's first commentzhenxiongwu's first comment");
 //		userRepository.save(user_zhenxiongwu);
 		bookCommentRepository.save(bookComment);
-		assertNotNull(user_zhenxiongwu.getBookComments());
+		assertNotNull(user_zhenxiongwu.getBookComments());*/
 //		assertTrue(user_zhenxiongwu.getBookComments()!=null);
+		List<BookComment> comments = bookCommentRepository.findAll();
+		assertTrue(comments.size()==2);
+		User user1 = comments.get(0).getUser();
+		User user2 = comments.get(1).getUser();
+		User user_zhenxiongwu = userRepository.findByName("zhenxiongwu");
+		User user_zhenxiongwu1 = userRepository.findByName("zhenxiongwu");
+		assertNotNull(user1);
+		assertNotNull(user2);
+		assertEquals(user1, user2);
+//		assertEquals(user_zhenxiongwu1, user_zhenxiongwu);
 		
-		for(Book book:books){
-//			assertTrue(book.getUsers().size()>0);
-		}
-
+		user_zhenxiongwu.getReading_books().add(books.get(0));
+		userRepository.save(user_zhenxiongwu);
+		
+		List<Book> books1 = bookRepository.findAll();
+		Book book1=books1.get(0);
+		assertTrue(book1.getReading_users().size()==1);
+		
+		user_zhenxiongwu = userRepository.findByName("zhenxiongwu");
+	
+		List<Book> recommendBooks = recommendService.booksRecommend(user_zhenxiongwu);
+		assertNotNull(recommendBooks);
+		
+//		assertTrue(recommendBooks.size()==0);
+		assertEquals(recommendBooks.size(), 5);
+		Logger logger = Logger.getLogger("zhenxiongwu");
+		for(Book book:recommendBooks)
+			logger.info("\n推荐的书："+book.getBookName()+"书作者："+book.getAuthor()+"\t书类型："+book.getBookTypes());
 
 	}
 
