@@ -14,7 +14,7 @@ $(document).ready(function() {
 	      return true;
 	  });
 	
-	var linkIndex = -1; // 获取点击的书籍状态列表位置
+	var linkIndex = 0; // 获取点击的书籍状态列表位置
 	$('ul.book-state li a').on('click', function() {
 		linkIndex = $('ul.book-state li a').index(this);
 		$('.book-state li').removeClass('active');
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		$(".bookList:eq(" + linkIndex + ")").show();
 		$(this).parent().addClass('active');
 		return false;
-	})
+	});
 	
 	$('#add').on(
 			'click',
@@ -34,13 +34,20 @@ $(document).ready(function() {
 				}, function(data) {
 					$('tbody:eq(' + linkIndex + ')').append(
 							'<tr><td class="text-center">' + data.bookName
-									+ '</td><td class="text-center">'
-									+ data.bookTypes
+									+ '</td><td class="text-center">' + data.bookTypes
 									+ '</td><td class="text-center">' + data.author
-									+ '</td></tr>');
+									+ '</td><td class="text-center">'
+									+ '<button class="btn btn-danger btn-sm del">删除</button>'
+					                + '</td></tr>');
 					$('#add-input').val('');
 				});
 			});
-
+	
+	$('.del').on('click', function() {
+		var tr = $(this).parent().parent();
+		var bookName = tr.children(':first-child').text();
+		tr.remove();
+		$.get('/deletebook', {bookName: bookName, pos: linkIndex});
+	});
 	
 });
