@@ -1,4 +1,0 @@
-insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787121282089', 'JavaEE开发的颠覆者: Spring Boot实战', '汪云飞', '电子工业出版社', 'Java, 编程, 教育', 0, 0);
-insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787115417305', 'Spring实战（第4版）', 'Craig Walls 沃尔斯', '人民邮电出版社', 'Java, 编程, 教育', 0, 0);
-insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544242516', '白夜行', ' 东野圭吾', '南海出版公司', '推理, 日本, 悬疑, 小说', 0, 0);
-insert into book(book_id, book_name, author, publisher, book_types, read_times, search_times) values('9787544270878', '解忧杂货店', ' 东野圭吾', '南海出版公司', '温暖, 日本, 治愈, 小说', 0, 0);
